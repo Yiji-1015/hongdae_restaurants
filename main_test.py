@@ -1,3 +1,5 @@
+pip install -r requirements.txt
+
 from kiwipiepy import Kiwi
 from kiwipiepy.utils import Stopwords
 import faiss
