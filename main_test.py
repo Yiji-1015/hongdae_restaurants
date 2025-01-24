@@ -85,13 +85,11 @@ def kiwi_word(text):
 
 file = faiss.find_one({"filename": "bm25_retriever.pkl"})
 if file:
-    with open("bm25_retriever.pkl", "rb") as f:
-        bm25_retriever = pickle.load(f)
+    bm25_retriever = pickle.loads(file.read()) 
 
 file = faiss.find_one({"filename": "bm25_word.pkl"})
 if file:
-    with open("bm25_word.pkl", "rb") as f:
-        bm25_word = pickle.load(f)
+    bm25_word = pickle.loads(file.read()) 
 
 faiss_retriever = db.as_retriever(search_kwargs={"k": 5}) 
 
