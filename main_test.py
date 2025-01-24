@@ -11,9 +11,9 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.schema.runnable import RunnablePassthrough, RunnableLambda
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory
-from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
-import gridfs
+from pymongo import MongoClient
+from gridfs import GridFS
 import os
 import tempfile
 import pickle
