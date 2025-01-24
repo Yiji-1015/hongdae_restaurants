@@ -83,13 +83,17 @@ def kiwi_word(text):
     N_list = [i.form for i in split_s if i.tag == "NNG" or i.tag == "NNP"]
     return N_list
 
-with open("bm25_retriever.pkl", "rb") as f:
-    bm25_retriever = pickle.load(f)
+file = faiss.find_one({"filename": "bm25_retriever.pkl"})
+if file:
+    with open("bm25_retriever.pkl", "rb") as f:
+        bm25_retriever = pickle.load(f)
 
-with open("bm25_word.pkl", "rb") as f:
-    bm25_word = pickle.load(f)
+file = faiss.find_one({"filename": "bm25_word.pkl"})
+if file:
+    with open("bm25_word.pkl", "rb") as f:
+        bm25_word = pickle.load(f)
 
-faiss_retriever = db.as_retriever(search_kwargs={"k": 5})
+faiss_retriever = db.as_retriever(search_kwargs={"k": 5}) 
 
 
 prompt_text = """
