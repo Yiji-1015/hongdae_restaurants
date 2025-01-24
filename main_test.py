@@ -41,7 +41,7 @@ db = FAISS(
 )
 
 db_m = client["Hongdae"]
-faiss = gridfs.GridFS(db_m)
+faiss = GridFS(db_m)
 
 def create_virtual_folder_with_files():
     # 임시 폴더 생성
