@@ -3,5 +3,4 @@ faiss-cpu
 langchain
 langchain-openai
 pymongo
-gridfs
 streamlit
