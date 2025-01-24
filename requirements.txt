@@ -2,5 +2,6 @@ kiwipiepy
 faiss-cpu
 langchain
 langchain-openai
+langchain_community
 pymongo
 streamlit
