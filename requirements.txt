@@ -3,5 +3,6 @@ faiss-cpu
 langchain
 langchain-openai
 langchain_community
+langchain_teddynote
 pymongo
 streamlit
