@@ -1,4 +1,4 @@
-pip install -r requirements.txt
+!pip install -r requirements.txt
 
 from kiwipiepy import Kiwi
 from kiwipiepy.utils import Stopwords
@@ -26,7 +26,7 @@ import uuid
 
 load_dotenv()
 api_key = os.getenv('OPENAI_API_KEY')
-uri = "mongodb+srv://yiji:yiji1214@cluster0.v1ig9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+uri = os.getenv('MONGODB_URI')
 client = MongoClient(uri, server_api=ServerApi('1'))
 embeddings_model = OpenAIEmbeddings(model = 'text-embedding-3-small', api_key = api_key)
 
